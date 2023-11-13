@@ -31,3 +31,14 @@ if button_clicked:
     # 마지막 화면인 경우 버튼 숨김
     if current_video_index == len(video_files) - 1:
         button_placeholder.empty()
+
+# 사이드바에 버튼 생성
+if st.sidebar.button("다른 페이지로 이동"):
+    # 다른 Streamlit 웹 페이지의 URL
+    new_page_url = "https://team5page2.streamlit.app/"
+
+    # 페이지를 새 URL로 리다이렉트
+    st.experimental_rerun()
+
+# 이 페이지의 나머지 콘텐츠
+st.write("현재 페이지입니다.")
